@@ -3,8 +3,11 @@ import { CustomInput } from "../../components/custom-input/CustomInput";
 import { Button, Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { userRegisterInput } from "../../assets/inputFields";
+import { registrationAdminAction } from "./registrationAction";
+import { useNavigate } from "react-router-dom";
 
 export const Registration = () => {
+  const Navigate = useNavigate();
   const [form, setForm] = useState({});
 
   const handleOnChange = (e) => {
@@ -13,7 +16,7 @@ export const Registration = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = async (e) => {
     try {
       e.preventDefault();
 
@@ -22,7 +25,8 @@ export const Registration = () => {
         return toast.error("password do not match");
       }
 
-      console.log(form);
+      const isUserCreated = await registrationAdminAction(form);
+      isUserCreated && Navigate("/dashboard");
     } catch (error) {}
   };
 

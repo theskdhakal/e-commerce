@@ -39,14 +39,15 @@ export const userRegisterInput = [
     label: "Password",
     name: "password",
     type: "password",
-    placeholder: "XXXXXXXXXX",
+    placeholder: "*********",
     required: true,
   },
   {
     label: "Confirm Password",
     name: "confirmPassword",
     type: "password",
-    placeholder: "XXXXXXXXXX",
+    placeholder: "*********",
+
     required: true,
   },
 ];

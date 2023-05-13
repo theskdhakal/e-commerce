@@ -22,7 +22,7 @@ export const Registration = () => {
 
       const { confirmPassword, password, ...rest } = form;
       if (confirmPassword !== password) {
-        return toast.error("password do not match");
+        return toast.error("password do not match, please try again");
       }
 
       const isUserCreated = await registrationAdminAction(form);

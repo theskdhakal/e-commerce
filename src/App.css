@@ -1,0 +1,12 @@
+:root {
+  --mainBg: white;
+}
+
+.navbar-brand {
+  width: 20px;
+  height: 20px;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+}

@@ -1,5 +1,9 @@
 import React from "react";
 
 export const Footer = () => {
-  return <div>All Rights Reserved!! Shiva</div>;
+  return (
+    <div className="bg-dark p-5 text-light text-center">
+      All Rights Reserved!! Shiva
+    </div>
+  );
 };

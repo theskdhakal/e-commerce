@@ -9,7 +9,7 @@ import logo from "../../assets/image/logo.JPG";
 
 export const Header = () => {
   return (
-    <Navbar bg="dark" variant="daek" expand="md">
+    <Navbar bg="success" variant="dark" expand="lg">
       <Container>
         <Navbar.Brand>
           <Link to="/">
@@ -19,21 +19,15 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link>
-              <Link to="/registration">
-                <FaUserEdit className="fs-3" />
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/login">
-                <GoSignIn className="fs-3" />
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/logout">
-                <GoSignOut className="fs-3" />
-              </Link>
-            </Nav.Link>
+            <Link to="/registration" className="nav-link">
+              <FaUserEdit className="fs-3" />
+            </Link>
+            <Link to="/login" className="nav-link">
+              <GoSignIn className="fs-3" />
+            </Link>
+            <Link to="/logout" className="nav-link">
+              <GoSignOut className="fs-3" />
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

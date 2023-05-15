@@ -13,7 +13,7 @@ export const Header = () => {
       <Container>
         <Navbar.Brand>
           <Link to="/">
-            <img src={logo} />
+            <img src={logo} alt="" className="image" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

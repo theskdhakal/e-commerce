@@ -2,6 +2,14 @@
   --mainBg: white;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  min-height: 80vh;
+}
+
 .navbar-brand a {
   text-decoration: none;
 }

@@ -9,7 +9,7 @@ import logo from "../../assets/image/logo.JPG";
 
 export const Header = () => {
   return (
-    <Navbar bg="success" variant="dark" expand="lg">
+    <Navbar bg="success" variant="dark" expand="lg" className="mb-2">
       <Container>
         <Navbar.Brand>
           <Link to="/">

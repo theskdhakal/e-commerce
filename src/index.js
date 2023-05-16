@@ -6,11 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
+import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter provider={store}>
       <App />
     </BrowserRouter>
   </React.StrictMode>

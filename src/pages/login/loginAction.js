@@ -1,11 +1,15 @@
 import { doc, getDoc } from "firebase/firestore";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth, db } from "../../config/firebase-config";
+import { USERSTABLE } from "../../assets/constants";
+import { setUser } from "./userSlice";
+import { toast } from "react-toastify";
 
 export const getUserAction = (uid) => async (dispatch) => {
   try {
     //get user id from firebase
 
-    const userRef = doc(db, "users", uid);
+    const userRef = doc(db, USERSTABLE, uid);
 
     const docSnap = await getDoc(userRef);
 
